@@ -1,0 +1,179 @@
+.button {
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  border-radius: 10px;
+  border: 1px solid transparent;
+
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease,
+    transform 0.1s ease;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+/* Warm neutral palette */
+.button {
+  background-color: #f4f1ee;
+  color: #3a3a3a;
+}
+
+.button:hover {
+  background-color: #ede8e3;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(180, 160, 140, 0.35);
+}
+
+/* Small – subtle actions */
+.button--small {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+}
+
+/* Medium – default everyday button */
+.button--medium {
+  padding: 0.55rem 1.1rem;
+  font-size: 0.95rem;
+  border-radius: 10px;
+}
+
+/* Large – primary or cozy CTA */
+.button--large {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.05rem;
+  border-radius: 12px;
+}
+
+/* Button Variants */
+.button--main {
+  background-color: #6b5f54;
+  color: #ffffff;
+}
+
+.button--main:hover {
+  background-color: #5e544b;
+}
+
+.button--main:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(107, 95, 84, 0.35);
+}
+
+.button--accent {
+  background-color: #e7ded6;
+  color: #3a3a3a;
+}
+
+.button--accent:hover {
+  background-color: #ddd2c7;
+}
+
+.button--accent:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(180, 160, 140, 0.35);
+}
+.button--ghost {
+  background-color: transparent;
+  color: #6b5f54;
+  border-color: transparent;
+}
+
+.button--ghost:hover {
+  background-color: rgba(107, 95, 84, 0.08);
+}
+
+.button--ghost:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(107, 95, 84, 0.25);
+}
+
+.button--disabled,
+.button:disabled {
+  background-color: #f1eeeb;
+  color: #9a948f;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Base button */
+  .button {
+    background-color: #2e2e2e;
+    color: #e6e6e6;
+    border-color: transparent;
+  }
+
+  .button:hover {
+    background-color: #383838;
+  }
+
+  .button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(180, 180, 180, 0.35);
+  }
+
+  /* MAIN – primary but not loud */
+  .button--main {
+    background-color: #b9a89a; /* soft stone */
+    color: #242424;
+  }
+
+  .button--main:hover {
+    background-color: #c6b7aa;
+  }
+
+  .button--main:focus-visible {
+    box-shadow: 0 0 0 3px rgba(200, 190, 180, 0.45);
+  }
+
+  /* ACCENT – secondary neutral */
+  .button--accent {
+    background-color: #3a3a3a;
+    color: #f0f0f0;
+  }
+
+  .button--accent:hover {
+    background-color: #444444;
+  }
+
+  .button--accent:focus-visible {
+    box-shadow: 0 0 0 3px rgba(180, 180, 180, 0.35);
+  }
+
+  /* GHOST */
+  .button--ghost {
+    background-color: transparent;
+    color: #cfcfcf;
+  }
+
+  .button--ghost:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .button--ghost:focus-visible {
+    box-shadow: 0 0 0 3px rgba(200, 200, 200, 0.3);
+  }
+
+  /* DISABLED */
+  .button--disabled,
+  .button:disabled {
+    background-color: #2a2a2a;
+    color: #8a8a8a;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+}

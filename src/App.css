@@ -1,0 +1,174 @@
+#root {
+  min-height: 100%;
+}
+
+.title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 24px;
+}
+
+.btn,
+.nav-link {
+  min-width: 80px;
+  white-space: nowrap;
+}
+
+/* Todo List */
+.todo-item {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  margin-right: 12px;
+}
+
+.input-row input {
+  flex: 1;
+}
+
+/* Age Calculator */
+
+.age-calc-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.form-row {
+  display: flex;
+  align-items: stretch;
+  column-gap: 18px;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  width: 180px;
+  margin: 0;
+  text-wrap: nowrap;
+  padding: 0 12px;
+}
+
+.age-calc-form button {
+  margin-top: 20px;
+  align-self: center;
+}
+
+/* Add New Task */
+.task-card {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+  padding: 24px;
+  border: 1px solid rgb(64, 64, 64);
+  border-radius: 12px;
+}
+
+.task-container {
+  flex: 1 1 auto;
+  position: relative;
+  text-align: start;
+  align-items: center;
+  width: 500px;
+  min-height: 564px;
+}
+
+.task-container > div {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.loading-screen {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  z-index: 10;
+}
+
+.task-card.skeleton {
+  height: 156px;
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(228, 228, 228, 0.25);
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .skeleton::after {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.25),
+      transparent
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton::after {
+    animation: none;
+  }
+}
+
+/* Directory */
+
+.person-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  justify-items: start;
+  align-items: start;
+  padding: 24px;
+  border-bottom: 1px dotted rgb(110, 110, 110);
+}
+
+.person-card p {
+  margin: 8px;
+}
+
+/* Themes */
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}

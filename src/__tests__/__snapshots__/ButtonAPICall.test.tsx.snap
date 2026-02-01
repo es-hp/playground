@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ButtonAPICall Component > matches the snapshot 1`] = `
+<div>
+  <h1>
+    Welcome
+  </h1>
+  <button>
+    Fetch Todos
+  </button>
+</div>
+`;
